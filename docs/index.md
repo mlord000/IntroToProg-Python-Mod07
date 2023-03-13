@@ -5,6 +5,7 @@
 
 In this assignment we will demonstrate the use of error handling with the try and except code blocks of Python. We will also demonstrate using the pickle module to create and store data in a binary file. In preparation of creating the script we reviewed the assignment material as well as several sources of information online. Included in the header of this assignment script are links to several online resources used for reference (Code Block 1).
 
+```python
 #         * regarding exception handling *
 #         https://docs.python.org/3/tutorial/errors.html
 #             Examples directly from the python documentation, there are
@@ -31,7 +32,7 @@ In this assignment we will demonstrate the use of error handling with the try an
 #         https://wiki.python.org/moin/UsingPickle
 #             From the python wiki, the most simple pickle example I have
 #             come across.
-
+```
 Code Block 1: references to several online resources used to help with this assignment
 
 
@@ -39,22 +40,25 @@ Code Block 1: references to several online resources used to help with this assi
 
 The setup for this script began with focusing on a simple example of exception handling. The code was written in the main body of the file to get started. Versions of the script were not created at the time so there are no longer references to what that code looked like. (This can be a reminder to create versions as we are writing code in the future so we can reference the changes during and after the creation process.) While testing the code by running it in PyCharm, I divided the code using separation of concerns to keep it organized and begin identifying sections that can be broken down into functions.
 
-An example of this is that after writing and refining the printed user instructions for the try/except example, rather than include this directly in the main body of code, it was separated into a function. Rather than writing the following in the main body (Code Block 2) it was incorporated into a function (Code Block 3).
+An example of this is that after writing and refining the printed user instructions for the try/except example, rather than include this directly in the main body of code (Code Block 2), it was separated into a function (Code Block 3).
 
+```python
 # inform the user of what this portion of the program will do
 print("\nWe will collect a number from you and apply it to the\n” 
     + "denominator of a fraction, then return the quotient.")
 print("\nType 'exit' to move on to the pickling portion of the assignment...")
 print("\n*** (To force an exception, enter '0', a float number, or a string other than 'exit'.) ***”)
-
+```
 Code Block 2: User instructions from the main body, later placed into a function
 
+```python
 # provide instructions to user
 TryExceptInstructions()
-
+```
 Code Block 3: Applying a function in the while loop instead of a large amount of text instructions
 
-I used a basic example of asking the user for the denominator of a fraction and returning the quotient of this and a randomly created nominator value. This allowed me to identify to common errors that I could catch with exception handling. These two errors are the ZeroDivisionError and ValueError (Figure 1).
+I used a basic example of asking the user for the denominator of a fraction and returning the quotient of this and a randomly created nominator value. This allowed me to identify two common errors that I could catch with exception handling. These two errors are the `ZeroDivisionError` and `ValueError` (Figure 1).
+
 
 
 ## Saving and Loading Data Using Pickle
