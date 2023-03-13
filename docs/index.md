@@ -59,7 +59,8 @@ Code Block 3: Applying a function in the while loop instead of a large amount of
 
 I used a basic example of asking the user for the denominator of a fraction and returning the quotient of this and a randomly created nominator value. This allowed me to identify two common errors that I could catch with exception handling. These two errors are the `ZeroDivisionError` and `ValueError` (Figure 1).
 
-ADD FIGURE 1 HERE
+![Image of exception handling code in this assignment for ZeroDivisionError and ValueError](Figure01.jpg "Image of exception handling code in this assignment for ZeroDivisionError and ValueError")
+Figure 1: two identifiable errors when collecting user input to return a quotient
 
 ## Saving and Loading Data Using Pickle
 
