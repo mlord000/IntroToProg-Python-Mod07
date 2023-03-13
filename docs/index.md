@@ -59,11 +59,12 @@ Code Block 3: Applying a function in the while loop instead of a large amount of
 
 I used a basic example of asking the user for the denominator of a fraction and returning the quotient of this and a randomly created nominator value. This allowed me to identify two common errors that I could catch with exception handling. These two errors are the `ZeroDivisionError` and `ValueError` (Figure 1).
 
-
+ADD FIGURE 1 HERE
 
 ## Saving and Loading Data Using Pickle
 
 For the example using the pickle module I tried to keep it as simple as possible by creating a list object that a user can add words to and opt for saving the list to a binary file. I began with the code found on one of the websites referenced during my online research (https://wiki.python.org/moin/UsingPickle). The other major reference I used is from the menu selection code from our Assignment 05. This presented code easily adaptable for this use case. Below is the menu selection code of the while loop from this section of the assignment (Code Block 4):
+```python
     # Add a new word/string to the list
     if (menu_choice.strip() == '1'):
         # prompt user for a task to add to the list/table
@@ -129,10 +130,10 @@ For the example using the pickle module I tried to keep it as simple as possible
             print("\nPlease use only 'Y' or 'N'")
             print("Select a menu option:")
             continue  # continue to the while/menu loop
-
+```
 Code Block 4: menu selection code for pickle example from assignment 07 showing similarities to the menu code in Assignment 5.
 
-All of this seemed to go together in a fairly straightforward manner. The only issue I ran into was an error that occurred if the binary file was not already created. I wanted to be able to load a file if it had already been created or create a file if it had not been created. If I needed to create a file, I did not want to write anything to it unless the user made that selection. I researched online and found a module that can be imported and used to test if a file exists (os.path) and used this in the code block for menu selection “4”.
+All of this seemed to go together in a fairly straightforward manner. The only issue I ran into was an error that occurred if the binary file was not already created. I wanted to be able to load a file if it had already been created or create a file if it had not been created. If I needed to create a file, I did not want to write anything to it unless the user made that selection. I researched online and found a module that can be imported and used to test if a file exists (`os.path`) and used this in the code block for menu selection “4”.
 
 It seems to me while working on this that there is still room to refine this code into additional functions, or perhaps even a set of class objects. Additionally, I was curious about whether one could present the binary data as characters to the user in via the command line. It seems like this could be a nice option to have, though I don’t know how practical it is. 
 
